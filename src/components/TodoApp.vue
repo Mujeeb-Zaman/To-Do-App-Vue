@@ -17,7 +17,7 @@
             </thead>
             <tbody>
                 <tr v-for="(task, index) in tasks" :key="index">
-                    <td><span :clgitass="{ 'line-through': task.status === 'finished'}">{{task.name}}</span></td>
+                    <td><span :class="{ 'line-through': task.status === 'finished'}">{{task.name}}</span></td>
                     <td>
                         <span class="pointer noselect" @click="changeStatus(index)"
                         :class="{
@@ -47,15 +47,15 @@ data(){
         statuses: ["to-do", "in-progress", "finished"],
         tasks: [
             {
-                name: "webcodecamp",
+                name: "HTML",
                 status: "to-do"
             },        
             {
-                name: "xyz",
+                name: "CSS",
                 status: "in-progress"
             },        
             {
-                name: "webcodecamp",
+                name: "JavaScript",
                 status: "finished",
             },
             ],
